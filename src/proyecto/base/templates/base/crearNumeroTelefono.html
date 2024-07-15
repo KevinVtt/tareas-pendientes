@@ -1,0 +1,19 @@
+{%extends 'base/principal.html'%}
+
+{% block content %}
+
+
+<div class="barra-superior">
+    <h1>Crear numero de telefono</h1>
+    <a href="{% url 'numeros-telefonos-lista' %}">&#x21a9; Volver</a>
+</div>
+
+<div class="cuerpo-tarjeta">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <input class="boton" type="submit" value="Enviar" style="margin-top: 20px;">
+    </form>
+</div>
+
+{% endblock content %}

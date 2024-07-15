@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pendientes</title>
+    <style>
+        body{
+            background-color: #9BAFEC;
+            font-family: Ubuntu,ital;
+            padding-top: 60px;
+        }
+        .container{
+            max-width: 550px;
+            margin: auto;
+            background-color: #B0BFEE;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+            box-shadow: rgba(0,0,0,0.21);
+            border-radius: 30px;
+            height: 650px;
+        }
+        .container a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: "Lato", sans-serif;
+        }
+        a,p{
+            color: #353834;
+        }
+        .barra-superior{
+            display: flex;
+            justify-content: space-between;
+            color:beige;
+            flex-direction: row;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 20px;
+            background: linear-gradient(90deg, #CFE5F6 0%, #9FCCEF 43%, #6FB8F0 100%);
+        }
+        .navegador-tareas{
+            width: 500px;
+            text-align: center;
+        }
+        
+        .boton-salir{
+            margin-top: 20px;
+            padding: 10px;
+            background-color: aqua;
+            border: none;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        
+        .envoltorio-tarea{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid rgb(225, 225, 225);
+        }
+        
+        .titulo-tarea{
+            display: flex;
+        }
+
+        .titulo-tarea a{
+            text-decoration: none;
+            color: #4b5156;
+            margin-left: 10px;
+        }
+
+        .icono-tarea-completa{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105,162,105);
+            border-radius: 50px;
+        }
+
+        .icono-tarea-incompleta{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218,218,218);
+            border-radius: 50px;
+        }
+
+        .enlace-eliminar {
+            text-decoration: none;
+            font-weight: 900;
+            color: #EA4220;
+            font-size: 22px;
+            line-height: 0;
+        }
+
+        #envoltorio-agregar-buscar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #enlace-agregar{
+            color: #EA4220;
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px #81413B;
+        }
+
+        input[type=text],input[type=password],textarea{
+            border: 1px solid #EB796F;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        label{
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .boton{
+            border: 1px solid #EB796F;
+            background-color: #FAFAFA;
+            columns: #EB796F;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cuerpo-tarjeta{
+            padding: 20px;
+        }
+
+        .crud-telefono{
+            display: flex;
+            gap: 10px;
+            margin:10px;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        {% block content %}
+        {% endblock content%}
+
+    </div>
+
+
+</body>
+</html>

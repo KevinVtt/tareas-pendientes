@@ -1,0 +1,20 @@
+{%extends 'base/principal.html'%}
+
+{% block content %}
+
+<div class="barra-superior">
+    <h1>Eliminar numero de telefono</h1>
+    <a href="{% url 'numeros-telefonos-lista' %}">&#x21a9; Volver</a>
+</div>
+
+<div class="cuerpo-tarjeta">
+    <form method="POST">
+        {% csrf_token %}
+    
+        <p>Vas a eliminar el numero: {{numero_telefono}}</p>
+        <input type="submit" value="Eliminar">
+    </form>
+</div>
+
+
+{% endblock content %}

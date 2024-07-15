@@ -1,0 +1,52 @@
+{%extends 'base/principal.html'%}
+
+{% block content %}
+
+<div class="barra-superior">
+    <h1>Lista de Numeros Telefonicos</h1>
+</div>
+
+<div class="cuerpo-tarjeta">
+    <a href="{%url 'crear-numero-telefonico' %}">Crear numero telefonico</a>
+    <table>
+        <tr>
+            <th>
+                Elementos
+            </th><th></th>
+            <th></th>
+        </tr>
+        {% for numero in numeros_telefonicos%}
+        <tr>
+            <td>
+                {{numero.numero_telefono}}
+                {{numero.nacionalidad}}
+            </td>
+            <td>
+                <a href="{% url 'detalle-numero-telefonico' numero.id%}">Ver</a>
+            </td>
+            <td>
+                <a href="{% url 'editar-numeros' numero.id%}">Editar</a>
+            </td>
+            <td>
+                <a href="{% url 'eliminar-numero' numero.id%}">Eliminar</a>
+            </td>
+        </tr>
+
+        
+        
+
+        {% empty %}
+        <h3>No hay elementos en esta lista</h3>
+
+
+        {% endfor %}
+
+
+
+    </table>
+    <div>
+        <a href="{%url 'tareas'%}"><input type="submit" value="Volver"></a>
+    </div>
+</div>
+
+{% endblock content %}

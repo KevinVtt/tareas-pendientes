@@ -1,0 +1,28 @@
+{%extends 'base/principal.html'%}
+
+{% block content %}
+<!-- templates/detalle_numeros_telefonos.html -->
+
+
+<div class="barra-superior">
+    <a href="{% url 'numeros-telefonos-lista' %}">&#x21a9; Volver</a>
+</div>
+
+
+<div class="cuerpo-tarjeta">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Detalle del Número Telefónico</title>
+    </head>
+    <body>
+        <h1>Numeros Telefonicos: {{ numeros }}</h1>
+        <p>Usuario: {{ numeros.usuario }}</p>
+        <p>Nacionalidad: {{ numeros.nacionalidad }}</p>
+        <p>Fecha de Nacimiento: {{ numeros.fecha_nacimiento }}</p>
+        <p>Número de Área: {{ numeros.numero_area }}</p>
+    </body>
+    </html>
+</div>
+
+{% endblock content %}
